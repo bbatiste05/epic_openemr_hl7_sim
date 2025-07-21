@@ -1,4 +1,6 @@
 from flask import Flask, request
+import os
+os.makedirs("hl7_logs", exist_ok=True)
 
 app = Flask(__name__)
 
