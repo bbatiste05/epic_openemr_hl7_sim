@@ -1,5 +1,7 @@
 # 🏥 Epic to OpenEMR HL7 Simulation Lab
 
+https://epicopenemrhl7sim-ggu5jo4vhiogjzhrudkfy8.streamlit.app/
+
 This project simulates a real-world HL7 workflow between an EHR system like Epic and an OpenEMR-like receiver. It includes:
 
 - ✅ HL7 Message Generator (Streamlit)
