@@ -1,14 +1,26 @@
-# 🏥 Epic to OpenEMR HL7 Simulation Lab
+👋 About Me
 
-https://epicopenemrhl7sim-ggu5jo4vhiogjzhrudkfy8.streamlit.app/
+I'm Brandon Batiste, a healthcare technology analyst with hands-on experience in Epic workflow simulation, infrastructure support, and EMR optimization. This project reflects my commitment to continuous learning and real-world application.
 
-This project simulates a real-world HL7 workflow between an EHR system like Epic and an OpenEMR-like receiver. It includes:
+Even without direct Epic access, I built my own sandbox to think like an analyst.
 
-- ✅ HL7 Message Generator (Streamlit)
-- ✅ Flask-based HL7 Receiver
-- ✅ Streamlit HL7 Dashboard for viewing + exporting messages
+# 🏥 Epic Analyst Simulation: OpenEMR + HL7 + Streamlit
 
-> Built as part of a hands-on healthcare IT integration portfolio using Python, Flask, and Streamlit.
+This project simulates key Epic workflows using **OpenEMR**, HL7 messaging, and a custom **Streamlit dashboard** to analyze and visualize clinical and billing data.
+
+---
+
+## 📌 Project Overview
+
+**Goal**: Emulate core Epic modules and workflows—such as Beaker (Lab), Resolute Billing, and In Basket communication—through open tools and demonstrate foundational analyst readiness for Epic support roles.
+
+---
+
+## ⚙️ Tools & Technologies
+- [OpenEMR Demo](https://demo.open-emr.org)
+- HL7 v2.5.1 Message Simulation
+- Streamlit for Dashboard Visualization
+- Python (Flask) for HL7 receiver
 
 ---
 
@@ -24,6 +36,46 @@ epic_openemr_hl7_sim/
 
 
 ---
+## 🧪 Simulated Workflows
+
+### ✅ Patient Registration  
+- Created a new patient `John Doe` via OpenEMR interface  
+- Equivalent to: `ADT A04` message in Epic (Patient Add)
+
+### ✅ Clinical Encounter + SOAP Note  
+- Entered a full SOAP note during encounter  
+- Epic Parallel: SmartText/SmartPhrase documentation
+
+### ✅ Lab Order (CBC Test)  
+- Placed order for CBC test via Procedure module  
+- Sent as simulated `ORM^O01` HL7 message
+
+### ✅ Lab Result Entry  
+- Result manually entered and saved  
+- Sent as outbound `ORU^R01` HL7 message to Flask receiver
+
+### ✅ In Basket Message Simulation  
+- Used internal messaging to simulate follow-up note to provider  
+- Mimics Epic’s In Basket communication for clinical collaboration
+
+### ✅ Billing Claim (HCFA 1500)  
+- Generated and reviewed billing claims  
+- Simulates Resolute Professional Billing (PB) workflow
+
+### ✅ Modifier Entry for CPT Code  
+- Manually added Modifier `-25` to simulate denial prevention  
+- Epic Parallel: Charge Router → Claim Edit Rules
+
+---
+
+## 📊 Streamlit Dashboard
+
+| Feature | Description |
+|--------|-------------|
+| ✅ HL7 Log Viewer | Displays inbound ORU messages |
+| ✅ Error Detector | Highlights malformed messages |
+| ✅ Patient Tracker | Tracks simulated patient workflows |
+| ✅ CSV Export | For review or QA submission |
 
 ## 🚀 How to Run
 
